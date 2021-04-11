@@ -1,4 +1,4 @@
-package com.example.cleanarch.core.interfaces.usecase;
+package com.example.cleanarch.core.interfaces;
 
 public interface DeleteBookUseCase {
 

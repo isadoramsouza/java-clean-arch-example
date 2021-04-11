@@ -10,4 +10,8 @@ public class BookAdapter {
         return Book.builder().id(bookEntity.getId()).name(bookEntity.getName()).author(bookEntity.getAuthor()).build();
     }
 
+    public static BookEntity toBusinessEntity(Book book){
+        return BookEntity.builder().id(book.getId()).name(book.getName()).author(book.getAuthor()).build();
+    }
+
 }

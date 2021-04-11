@@ -1,8 +1,8 @@
-package com.example.cleanarch.core.interfaces.repository;
+package com.example.cleanarch.core.interfaces;
 
 import com.example.cleanarch.core.entity.Book;
 
-public interface BookRepository {
+public interface BookDataProvider {
 
     Book findById(long id);
     void deleteById(long id);

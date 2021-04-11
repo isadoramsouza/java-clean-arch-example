@@ -1,15 +1,18 @@
-package com.example.cleanarch.data.repository;
+package com.example.cleanarch.data;
 
+import com.example.cleanarch.core.interfaces.BookDataProvider;
 import com.example.cleanarch.core.entity.Book;
 import com.example.cleanarch.core.exception.BookNotFoundException;
-import com.example.cleanarch.core.interfaces.repository.BookRepository;
 import com.example.cleanarch.data.adapter.BookAdapter;
-import lombok.AllArgsConstructor;
+import com.example.cleanarch.data.repository.BookRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
-@AllArgsConstructor
-public class JpaBookRepositoryImpl implements BookRepository {
+@Component
+@RequiredArgsConstructor
+public class BookDataProviderImpl implements BookDataProvider {
 
-    private final JpaBookRepository bookRepository;
+    private final BookRepository bookRepository;
 
     @Override
     public Book findById(long id) {
