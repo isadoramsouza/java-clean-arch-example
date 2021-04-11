@@ -1,0 +1,8 @@
+version: '3'
+services:
+
+  processos-app:
+    image: java-clean-arch-example
+    container_name: java-clean-arch-example
+    ports:
+      - 8080:8080
