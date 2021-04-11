@@ -1,9 +1,11 @@
 package com.example.cleanarch.application.registry.usecase;
 
 import com.example.cleanarch.core.interfaces.BookDataProvider;
+import com.example.cleanarch.core.interfaces.CreateBookUseCase;
 import com.example.cleanarch.core.interfaces.DeleteBookUseCase;
-import com.example.cleanarch.core.usecase.DeleteBookUseCaseImpl;
 import com.example.cleanarch.core.interfaces.FindBookUseCase;
+import com.example.cleanarch.core.usecase.CreateBookUseCaseImpl;
+import com.example.cleanarch.core.usecase.DeleteBookUseCaseImpl;
 import com.example.cleanarch.core.usecase.FindBookUseCaseImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -23,5 +25,10 @@ public class UseCaseBeanRegistry {
     @Bean("DeleteBookUseCase")
     public DeleteBookUseCase createDeleteBookUseCase() {
         return new DeleteBookUseCaseImpl(bookRepository);
+    }
+
+    @Bean("CreateBookUseCase")
+    public CreateBookUseCase createCreateBookUseCase() {
+        return new CreateBookUseCaseImpl(bookRepository);
     }
 }

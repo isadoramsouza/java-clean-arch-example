@@ -1,6 +1,6 @@
 package com.example.cleanarch.application.entrypoint;
 
-import com.example.cleanarch.controller.interfaces.DeleteBookByIdController;
+import com.example.cleanarch.controller.interfaces.DeleteBookController;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/book")
 @RequiredArgsConstructor
-public class DeleteBookByIdEntryPoint {
+public class DeleteBookEntryPoint {
 
-    private final DeleteBookByIdController deleteBookByIdController;
+    private final DeleteBookController deleteBookByIdController;
 
     @DeleteMapping("/{id}")
     @ApiOperation(value = "Delete book by id")

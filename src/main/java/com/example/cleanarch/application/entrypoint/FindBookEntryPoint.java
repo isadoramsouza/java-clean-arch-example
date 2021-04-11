@@ -1,7 +1,7 @@
 package com.example.cleanarch.application.entrypoint;
 
-import com.example.cleanarch.application.entrypoint.dto.BookDTO;
-import com.example.cleanarch.controller.interfaces.FindBookByIdController;
+import com.example.cleanarch.controller.interfaces.FindBookController;
+import com.example.cleanarch.core.dto.BookDTO;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -15,12 +15,11 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RestController
 @RequestMapping(value="/api/book",  produces = APPLICATION_JSON_VALUE)
 @RequiredArgsConstructor
-public class FindBookByIdEntryPoint {
+public class FindBookEntryPoint {
 
-    private final FindBookByIdController findBookByIdController;
+    private final FindBookController findBookByIdController;
 
     @GetMapping("/{id}")
-    @DeleteMapping("/{id}")
     @ApiOperation(value = "Returns book by id")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Book found"),

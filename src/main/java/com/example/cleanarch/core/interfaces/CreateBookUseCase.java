@@ -2,7 +2,7 @@ package com.example.cleanarch.core.interfaces;
 
 import com.example.cleanarch.core.dto.BookDTO;
 
-public interface FindBookUseCase {
+public interface CreateBookUseCase {
 
-    BookDTO execute(long id);
+    BookDTO execute(BookDTO book);
 }
