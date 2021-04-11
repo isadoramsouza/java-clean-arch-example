@@ -8,10 +8,10 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class FindBookUseCaseImpl implements FindBookUseCase {
 
-    private final BookDataProvider bookRepository;
+    private final BookDataProvider bookDataProvider;
 
     @Override
     public Book execute(long id) {
-        return bookRepository.findById(id);
+        return bookDataProvider.findById(id);
     }
 }

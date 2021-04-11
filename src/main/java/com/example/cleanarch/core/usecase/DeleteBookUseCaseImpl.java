@@ -7,11 +7,11 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class DeleteBookUseCaseImpl implements DeleteBookUseCase {
 
-    private final BookDataProvider bookRepository;
+    private final BookDataProvider bookDataProvider;
 
     @Override
     public void execute(long id) {
-        bookRepository.deleteById(id);
+        bookDataProvider.deleteById(id);
     }
 
 }
