@@ -4,5 +4,5 @@ import com.example.cleanarch.core.entity.Book;
 
 public interface FindBookUseCase {
 
-    Book findById(long id);
+    Book execute(long id);
 }
